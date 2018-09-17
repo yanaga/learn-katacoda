@@ -23,7 +23,6 @@ oc expose svc servicegraph
 oc expose svc grafana
 oc expose svc prometheus
 oc expose svc tracing`{{execute T1}}
->>>>>>> Testing installation commands
 
 After the execution, Istio objects will be created.
 
