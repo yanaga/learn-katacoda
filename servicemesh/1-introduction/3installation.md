@@ -6,9 +6,9 @@ Now that you are logged in, it's time to extract the existing istio installation
 
 ## Before the installation
 
-Istio uses [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) like VirtualServices and DestinationRule.
+Istio uses [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) like `VirtualService`s and `DestinationRule`s.
 
-To allow OpenShift/Kubernetes to understand those values, we need first to install the 'CustomResourceDefinitions' file using the command `oc apply -f istio-1.0.2/install/kubernetes/helm/istio/templates/crds.yaml`{{execute T1}}
+To allow OpenShift/Kubernetes to understand those values, we first need to install the 'CustomResourceDefinitions' file using the command `oc apply -f istio-1.0.2/install/kubernetes/helm/istio/templates/crds.yaml`{{execute T1}}
 
 ## Continue the installation
 
