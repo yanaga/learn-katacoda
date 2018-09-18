@@ -6,7 +6,7 @@ An Istio service mesh is logically split into a data plane and a *control plane*
 
 The following diagram shows the different components that make up each plane:
 
-![](../../assets/servicemesh/introduction/arch.svg)
+![](../../assets/servicemesh/introduction/arch.png)
 
 ## Istio Components
 
