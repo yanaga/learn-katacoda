@@ -10,27 +10,6 @@ Istio uses [Custom Resources](https://kubernetes.io/docs/concepts/extend-kuberne
 
 To allow OpenShift/Kubernetes to understand those values, we need first to install the 'CustomResourceDefinitions' file using the command `oc apply -f istio-1.0.2/install/kubernetes/helm/istio/templates/crds.yaml`{{execute T1}}
 
-*"OpenShift provides security context constraints (SCC) that control the actions that a pod can perform and what it has the ability to access."*
-
-Because of SCC, we need to allow the Istio service account to execute images with any user id.
-There's a SCC called `anyuid` that needs to be associated with Istio service accounts.
-
-Execute the following commands
-
-`
-oc adm policy add-scc-to-user anyuid -z istio-egressgateway-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-citadel-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-ingressgateway-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-cleanup-old-ca-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-mixer-post-install-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-mixer-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-pilot-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-sidecar-injector-service-account -n istio-system
-oc adm policy add-scc-to-user anyuid -z istio-galley-service-account -n istio-system
-`{{execute T1}}
-
-To understand more about SCC, we recommend you to read [Understanding Service Accounts and SCCs](https://blog.openshift.com/understanding-service-accounts-sccs/)
-
 ## Continue the installation
 
 Istio provides a file `install/kubernetes/istio-demo.yaml` that contains the definition of all objects that needs to be created in the Kubernetes cluster.
