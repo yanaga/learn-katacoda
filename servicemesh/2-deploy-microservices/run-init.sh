@@ -5,8 +5,6 @@ rm -rf /root/projects/* /root/temp-pom.xml /root/projects/incubator-openwhisk-de
 
 wget -c https://github.com/istio/istio/releases/download/1.0.2/istio-1.0.2-linux.tar.gz -P /root/installation
 
-sed -i 's/$/ master/g' /etc/hosts
-
 tar -xvzf /root/installation/istio-1.0.2-linux.tar.gz -C /root/installation
 
 oc login -u system:admin
