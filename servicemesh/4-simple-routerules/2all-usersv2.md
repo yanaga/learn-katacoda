@@ -13,4 +13,4 @@ istioctl create -f ~/projects/istio-tutorial/istiofiles/virtual-service-recommen
 
 Make sure that the following command is running on `Terminal 2` `while true; do curl http://customer-tutorial.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com; sleep .2; done`{{execute T2}}
 
-you should only see v2 being returned.
+You should only see `v2` being returned.

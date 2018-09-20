@@ -55,10 +55,10 @@ Once that the recommendation pod READY column is 2/2, you can hit `CTRL+C`.
 
 Make sure that the following command is running on `Terminal 2` `while true; do curl http://customer-tutorial.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com; sleep .5; done`{{execute T2}}
 
-You will see two requests into the v2 and one for v1
+You will see two requests for `v2` for each one of `v1`.
 
-Scale back to a single replica of the recommendation-v2 Deployment
+Scale back to a single replica of the `recommendation-v2` deployment:
 
 `oc scale --replicas=1 deployment/recommendation-v2`{{execute interrupt T1}}
 
-On `Terminal 2`, you will see one requests into the v2 and one for v1.
+On `Terminal 2`, you will see requests being round-robin balanced between `v1` and `v2`.
