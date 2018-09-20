@@ -1,3 +1,5 @@
+NOTE: Do not attempt to edit the files or run any command before the Terminal cursor becomes available.
+
 We can experiment with Istio routing rules by making a change to RecommendationsController.java.
 
 Open `/recommendation/java/vertx/src/main/java/com/redhat/developer/demos/recommendation/RecommendationVerticle.java`{{open}} in the editor. Now make the following modification.
@@ -5,7 +7,6 @@ Open `/recommendation/java/vertx/src/main/java/com/redhat/developer/demos/recomm
 ```java
     private static final String RESPONSE_STRING_FORMAT = "recommendation v2 from '%s': %d\n";
 ```    
-</pre>
 
 **Note:** The file is saved automatically. 
 
