@@ -1,4 +1,4 @@
-NOTE: Do not attempt to edit the files or run any command before the Terminal cursor becomes available.
+**IMPORTANT**: *Do not attempt to edit the files or run any command before the Terminal cursor becomes available.*
 
 We can experiment with Istio routing rules by making a change to RecommendationsController.java.
 
