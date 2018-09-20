@@ -6,7 +6,7 @@ Our `customer` and `preference` services are using the [TracerResolver](https://
 
 Check the Jaeger route by typing `oc get routes -n istio-system`{{execute interrupt T1}}
 
-Now that you know the URL of Jaeger, access it at http://jaeger-query-istio-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com 
+Now that you know the URL of Jaeger, access it at http://tracing-istio-system.[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com 
 
 Select `customer` from the list of services and click on `Find Traces`:
 
