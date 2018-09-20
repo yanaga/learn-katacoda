@@ -4,7 +4,7 @@ Note that it specifies that the destination will be the `recommendation` deploym
 
 Let's replace the `VirtualService`.
 
-`istioctl replace -f ~/projects/istio-tutorial/istiofiles/ virtual-service-recommendation-v1.yml -n tutorial`{{execute T1}}
+`istioctl replace -f ~/projects/istio-tutorial/istiofiles/virtual-service-recommendation-v1.yml -n tutorial`{{execute T1}}
 
 **Note**: We used `replace` instead of `create` since we are overlaying the previous `VirtualService`.
 
