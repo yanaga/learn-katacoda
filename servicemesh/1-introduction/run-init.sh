@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 hostname -I | tr ' ' '\n' | awk NF | awk '{print $1 " master"}' | tee -a /etc/hosts
 systemctl restart dnsmasq
 setenforce 0
@@ -9,4 +10,6 @@ git --work-tree=/root/projects/istio-tutorial/ --git-dir=/root/projects/istio-tu
 git --work-tree=/root/projects/istio-tutorial/ --git-dir=/root/projects/istio-tutorial/.git checkout master
 
 rm -rf /root/projects/* /root/temp-pom.xml /root/projects/incubator-openwhisk-devtools
-until $(oc status &> /dev/null); do sleep 1; done; oc adm policy add-cluster-role-to-user cluster-admin admin
+until $(oc status &> /dev/null); do sleep 1; done; 
+
+oc adm policy add-cluster-role-to-user cluster-admin admin
