@@ -23,9 +23,9 @@
       "title": "Istio workshop: Monitoring and Tracing"
     },
     {
-      "external_link": "https://learn.openshift.com/servicemesh/4-simple-routerules",
-      "course_id": "4-simple-routerules",
-      "title": "Istio workshop: Simple RouteRules"
+      "external_link": "https://learn.openshift.com/servicemesh/4-simple-routing",
+      "course_id": "4-simple-routing",
+      "title": "Istio workshop: Simple Routing"
     },
     {
       "external_link": "https://learn.openshift.com/servicemesh/5-advanced-routerules",
