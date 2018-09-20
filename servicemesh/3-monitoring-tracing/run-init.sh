@@ -1,5 +1,6 @@
 #!/bin/bash
-hostname -I | awk '{print $1 " master"}' | tee -a /etc/hosts
+hostname -I | tr ' ' '\n' | awk NF | awk '{print $1 " master"}' | tee -a /root/file
+systemctl restart dnsmasq
 setenforce 0
 
 until (oc status &> /dev/null); do sleep 1; done
