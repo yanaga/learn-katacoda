@@ -1,5 +1,5 @@
 #!/bin/bash
-hostname -I | tr ' ' '\n' | awk NF | awk '{print $1 " master"}' | tee -a /root/file
+hostname -I | tr ' ' '\n' | awk NF | awk '{print $1 " master"}' | tee -a /etc/hosts
 systemctl restart dnsmasq
 setenforce 0
 

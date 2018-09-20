@@ -1,6 +1,6 @@
 #!/bin/bash
-
-hostname -I | awk '{print $1 " master"}' | tee -a /etc/hosts
+hostname -I | tr ' ' '\n' | awk NF | awk '{print $1 " master"}' | tee -a /etc/hosts
+systemctl restart dnsmasq
 setenforce 0
 
 wget -c https://github.com/istio/istio/releases/download/1.0.2/istio-1.0.2-linux.tar.gz -P /root/installation
